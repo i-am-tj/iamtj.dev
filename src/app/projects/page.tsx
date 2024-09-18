@@ -23,7 +23,7 @@ export default async function Projects() {
 
     return (
         <div className="min-h-[50rem] flex flex-col items-center justify-center px-4 mt-12 font-[family-name:var(--font-geist-sans)]">
-            <h1 className="text-2xl md:text-5xl font-bold mb-6 md:mb-12 text-center">Things I've built</h1>
+            <h1 className="text-2xl md:text-5xl font-bold mb-6 md:mb-12 text-center">Things I&apos;ve built</h1>
             <div className="text-base md:text-lg mb-16 text-center max-w-3xl">
             Here are some of the projects I have worked on.
             </div>

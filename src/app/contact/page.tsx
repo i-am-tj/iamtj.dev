@@ -5,7 +5,7 @@ export default function Contact() {
     <div className="min-h-[50rem] flex flex-col items-center justify-center mt-12 font-[family-name:var(--font-geist-sans)]">
       <h1 className="text-2xl md:text-5xl font-bold">Get In Touch</h1>
       <p className="text-base md:text-lg mt-20 mb-16 text-center max-w-3xl px-16">
-        Feel free to reach out if you have any questions or just want to say hello! I'm always open to discussing new opportunities, collaborating on projects, or simply connecting with like-minded individuals.
+        Feel free to reach out if you have any questions or just want to say hello! I&apos;m always open to discussing new opportunities, collaborating on projects, or simply connecting with like-minded individuals.
       </p>
       <div className="flex space-x-4">
         <Link 
