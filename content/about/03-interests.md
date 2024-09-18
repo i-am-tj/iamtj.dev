@@ -1,0 +1,1 @@
+When I'm not coding, I love playing cricket and badminton. These sports not only keep me active but also offer a great way to unwind and maintain balance in life. I find that both team dynamics and personal challenges in sports resonate with my approach to solving problems in tech.

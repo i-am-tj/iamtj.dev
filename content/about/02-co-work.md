@@ -1,0 +1,1 @@
+In addition to my full-time work, I take on freelance projects that help businesses improve their online presence and streamline their workflows. I also enjoy teaching and mentoring students, sharing my knowledge of software development to help aspiring developers gain hands-on experience and grow in their careers.
