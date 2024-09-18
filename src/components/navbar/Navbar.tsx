@@ -1,7 +1,7 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Logo from "./logo/Logo";
 import { headerData as data } from "./data/headerData";
@@ -18,6 +18,18 @@ const Navbar = () => {
     const closeMenu = () => {
         setIsOpen(false);
     };
+
+    useEffect(() => {
+        if (isOpen) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = 'auto';
+        }
+  
+        return () => {
+          document.body.style.overflow = 'auto';
+        };
+      }, [isOpen]);
 
     const pathname = usePathname();
 
@@ -48,7 +60,7 @@ const Navbar = () => {
             </button>
 
             {isOpen && (
-            <div className="md:hidden fixed inset-0 top-20 backdrop-blur-md w-full h-screen p-6 flex flex-col z-50 bg-black bg-opacity-90">
+            <div className="md:hidden fixed inset-0 top-20 backdrop-blur-md w-full max-h-screen p-6 flex flex-col z-50 bg-opacity-90">
                 <div className="w-full flex flex-col items-center space-y-4 sm:p-4">
                 {data.general.map((item) => (
                 <Link
