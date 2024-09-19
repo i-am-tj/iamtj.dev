@@ -8,9 +8,10 @@ export default function Home() {
           <Image
             src="/static/images/TJ_Casual.png"
             alt="Tanuj Chakraborty"
-            layout="fill"
-            objectFit="cover"
-            className="rounded-sm"
+            fill
+            className="object-cover rounded-sm"
+            quality={50}
+            priority
           />
         </div>
       </div>
