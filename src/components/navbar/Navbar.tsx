@@ -40,8 +40,10 @@ const Navbar = () => {
                 {data.general.map((item) => (
                 <Link key={item.name}
                     href={item.href}
-                    className={`hover:text-gray-400 transition-colors duration-300 font-extralight ${
-                        pathname === item.href ? 'underline' : ''
+                    className={`relative hover:text-gray-400 transition-colors duration-300 font-extralight ${
+                        pathname === item.href ? 
+                        'after:absolute after:left-0 after:bottom-0 after:h-[1px] after:w-full after:bg-gray-400' : 
+                        'after:absolute after:left-0 after:bottom-0 after:h-[1px] after:w-0 after:bg-gray-400 after:transition-all after:duration-300 hover:after:w-full'
                       }`}>
                     {item.name}
                 </Link>
