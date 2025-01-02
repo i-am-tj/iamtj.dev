@@ -30,23 +30,26 @@ Follow these steps to get the project running locally:
 ### Installation
 
 1. Clone the repository:
+
    ```bash
     git clone https://github.com/i-am-tj/iamtj.dev.git
-    ```
+   ```
 
 2. Navigate to the project directory:
-    ```bash
-    cd iamtj.dev
-    ```
+
+   ```bash
+   cd iamtj.dev
+   ```
 
 3. Install the dependencies:
-    ```bash
-    npm install
-    ```
+   ```bash
+   npm install
+   ```
 
 ### Running the Development Server
 
 Start the development server:
+
 ```bash
 npm run dev
 ```
@@ -56,6 +59,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ### Building for Production
 
 To create an optimized production build:
+
 ```bash
 npm run build
 ```
@@ -75,6 +79,7 @@ This project is licensed under the MIT License. See the [LICENSE](./LICENSE) fil
 ## 📬 Contact
 
 Feel free to reach out if you have any questions or suggestions! You can contact me directly through the website or connect with me on:
+
 - Email: [Tanuj Chakraborty](mailto:connect.with.iamtj@gmail.com)
 - LinkedIn: [Tanuj Chakraborty](https://www.linkedin.com/in/i-am-tj/)
 - GitHub: [i-am-tj](https://github.com/i-am-tj/)

@@ -19,7 +19,8 @@ const Footer = () => {
           ))}
         </div>
         <div className="flex flex-col items-center justify-center text-center font-extralight cursor-pointer space-y-2 md:flex-row md:space-y-0 md:space-x-2">
-        Developed with ❤️ by {siteMetadata.author} &copy; {new Date().getFullYear()}
+          Developed with ❤️ by {siteMetadata.author} &copy;{' '}
+          {new Date().getFullYear()}
         </div>
       </div>
     </footer>

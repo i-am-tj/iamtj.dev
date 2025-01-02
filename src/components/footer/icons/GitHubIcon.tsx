@@ -1,5 +1,5 @@
 const GitHubIcon = () => (
-    <svg
+  <svg
     className="w-7 h-7 transform hover:rotate-[-4deg] transition"
     viewBox="0 0 24 24"
     fill="none"
