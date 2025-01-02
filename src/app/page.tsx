@@ -20,7 +20,7 @@ export default function Home() {
       
       <div className="flex flex-col justify-center items-center md:items-start text-center md:text-left">
         <p className="text-2xl md:text-4xl font-bold mb-2">Hey, I&apos;m Tanuj 👋</p>
-        <p className="text-sm md:text-lg font-bold mb-2">Software Developer based out of India 🇮🇳 </p>
+        <p className="text-sm md:text-lg font-bold mb-2">Software Developer based in India 🇮🇳 </p>
         <p className="text-sm md:text-lg mb-1">Writing code that turns ideas into impact 🌟</p>
         <p className="text-sm md:text-lg">Glad you stopped by 😊</p>
       </div>
