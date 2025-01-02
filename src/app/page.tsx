@@ -6,7 +6,7 @@ export default function Home() {
       <div className="flex justify-center">
         <div className="relative w-64 h-96 transform -rotate-6 hover:rotate-[-4deg] transition border-4 border-gray-300 rounded-lg overflow-hidden">
           <Image
-            src="/static/images/TJ_Casual.png"
+            src="/static/images/TJ_Formal.JPG"
             alt="Tanuj Chakraborty"
             fill
             className="object-cover rounded-sm"
