@@ -72,15 +72,14 @@ The project is set up to be easily deployed on Vercel. For more details, refer t
 
 Here are the latest performance metrics for the website:
 
-| Metric            | Mobile | Desktop |
-|--------------------|--------|---------|
-| Performance        | 100     | 100      |
-| Accessibility      | 100     | 100     |
-| Best Practices     | 100    | 100     |
-| SEO                | 100    | 100     |
+| Metric         | Mobile | Desktop |
+| -------------- | ------ | ------- |
+| Performance    | 100    | 100     |
+| Accessibility  | 100    | 100     |
+| Best Practices | 100    | 100     |
+| SEO            | 100    | 100     |
 
 🔗 **Check detailed results on [PageSpeed Insights](https://pagespeed.web.dev/report?url=https://iamtj.dev)**
-
 
 ## 📄 License
 

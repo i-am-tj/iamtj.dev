@@ -24,15 +24,15 @@ const Footer = () => {
         </div>
         <div className="flex flex-col items-center justify-center text-center font-extralight cursor-pointer space-y-2 sm:flex-row sm:space-y-0 sm:space-x-2">
           <span className="flex items-center space-x-1">
-              <span>Deployed on:</span>
-              <a
-                  href="https://vercel.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center hover:underline"
-              >
-                  Vercel
-              </a>
+            <span>Deployed on:</span>
+            <a
+              href="https://vercel.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center hover:underline"
+            >
+              Vercel
+            </a>
           </span>
         </div>
       </div>
