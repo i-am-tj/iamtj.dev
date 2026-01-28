@@ -6,6 +6,7 @@ import './globals.css';
 import Navbar from '@/components/navbar/Navbar';
 import Footer from '@/components/footer/Footer';
 import JsonLd from '@/components/seo/JsonLd';
+import { Analytics } from '@vercel/analytics/next';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -83,6 +84,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <SpeedInsights />
+        <Analytics />
         <Footer />
       </body>
     </html>
