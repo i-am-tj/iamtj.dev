@@ -14,8 +14,8 @@ export const siteMetadata = {
   siteUrl: 'https://iamtj.dev',
   siteRepo: 'https://github.com/i-am-tj/iamtj.dev',
   imageAltDesc: 'Tanuj Chakraborty Profile Picture',
-  avatarImage: '', // to be filled once uploaded to cloudinary
-  socialBanner: '', // // to be filled once uploaded to cloudinary
+  avatarImage: '/static/images/TJ_DP.jpg', // to be filled once uploaded to cloudinary
+  socialBanner: '/static/images/TJ_DP.jpg', // // to be filled once uploaded to cloudinary
   email: 'mailto:connect.with.iamtj@gmail.com',
   github: 'https://github.com/i-am-tj/',
   twitter: 'https://twitter.com/_i_am_tj_',
@@ -24,7 +24,7 @@ export const siteMetadata = {
   linkedin: 'https://www.linkedin.com/in/i-am-tj/',
   hashnode: 'https://hashnode.com/@iamtj97',
   buymeacoffee: 'https://www.buymeacoffee.com/iamtj97',
-  resume: '/static/Tanuj_Chakraborty.pdf',
+  resume: '/static/documents/Tanuj_Chakraborty.pdf',
   snippets: '', //to be filled by notion page (for developers articles)
   carbonCode: '',
   carbonPlacement: '',

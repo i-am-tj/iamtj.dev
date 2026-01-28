@@ -27,7 +27,7 @@ export default async function Page() {
   const linksContent = await getMarkdownContent('links');
 
   return (
-    <div className="min-h-[50rem] flex flex-col items-center justify-center px-4 mt-12 font-[family-name:var(--font-geist-sans)]">
+    <main className="min-h-[50rem] flex flex-col items-center justify-center px-4 mt-12 font-[family-name:var(--font-geist-sans)]">
       {/* About Section */}
       <h1 className="text-2xl md:text-4xl font-bold text-center">About Me</h1>
       <div className="text-base md:text-lg mt-6 mb-4 text-center max-w-3xl px-16">
@@ -111,6 +111,6 @@ export default async function Page() {
           })}
         </div>
       </div>
-    </div>
+    </main>
   );
 }

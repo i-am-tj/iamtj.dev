@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className="min-h-[50rem] flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12 mt-12 px-6 font-[family-name:var(--font-geist-sans)]">
+    <main className="min-h-[50rem] flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12 mt-12 px-6 font-[family-name:var(--font-geist-sans)]">
       <div className="flex justify-center">
         <div className="relative w-64 h-96 transform -rotate-6 hover:rotate-[-4deg] transition border-4 border-gray-300 rounded-lg overflow-hidden">
           <Image
@@ -15,13 +15,11 @@ export default function Home() {
           />
         </div>
       </div>
-      <br />
-      <br />
 
       <div className="flex flex-col justify-center items-center md:items-start text-center md:text-left">
-        <p className="text-2xl md:text-4xl font-bold mb-2">
-          Hey, I&apos;m Tanuj 👋
-        </p>
+        <h1 className="text-3xl md:text-5xl font-bold mb-2">
+          Hey, I&#39;m Tanuj 👋
+        </h1>
         <p className="text-sm md:text-lg font-bold mb-2">
           Software Developer based in India 🇮🇳{' '}
         </p>
@@ -30,6 +28,6 @@ export default function Home() {
         </p>
         <p className="text-sm md:text-lg">Glad you stopped by 😊</p>
       </div>
-    </div>
+    </main>
   );
 }

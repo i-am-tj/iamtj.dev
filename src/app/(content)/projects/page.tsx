@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { siteMetadata as data } from '@/data/siteMetadata';
+import { siteMetadata as data } from '@/config/site';
 import fs from 'fs';
 import matter from 'gray-matter';
 import path from 'path';
@@ -43,11 +43,16 @@ export default async function Projects() {
             </div>
             <div className="flex justify-end">
               {/* <Link href={`/projects/${project.slug}`} passHref>  //for later */}
-              <Link href={project.github} target="_blank">
-                <div className="text-blue-500 hover:text-blue-700 cursor-pointer flex items-center">
-                  <span className="text-sm md:text-base">View Project</span>
-                  <span className="ml-2">→</span>
-                </div>
+              <Link
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 hover:text-blue-700 cursor-pointer flex items-center"
+              >
+                <span className="text-sm md:text-base">View Project</span>
+                <span className="ml-2" aria-hidden>
+                  →
+                </span>
               </Link>
             </div>
           </div>
@@ -60,6 +65,7 @@ export default async function Projects() {
         <Link
           href={data.github}
           target="_blank"
+          rel="noopener noreferrer"
           className="bg-blue-500 text-sm md:text-base text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-300"
         >
           GitHub Profile

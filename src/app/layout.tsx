@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import { siteMetadata } from '@/data/siteMetadata';
+import { siteMetadata } from '@/config/site';
 import localFont from 'next/font/local';
 import './globals.css';
 import Navbar from '@/components/navbar/Navbar';
 import Footer from '@/components/footer/Footer';
+import JsonLd from '@/components/seo/JsonLd';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -18,6 +19,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteMetadata.siteUrl),
   title: siteMetadata.title,
   description: siteMetadata.description,
   keywords: siteMetadata.keywords,
@@ -25,6 +27,8 @@ export const metadata: Metadata = {
     title: siteMetadata.titleAlt,
     description: siteMetadata.headerAltTitle,
     url: siteMetadata.siteUrl,
+    siteName: siteMetadata.titleAlt,
+    locale: siteMetadata.locale,
     images: [
       {
         url: siteMetadata.avatarImage,
@@ -46,12 +50,21 @@ export const metadata: Metadata = {
       },
     ],
   },
+  icons: {
+    icon: '/static/icons/i-am-tj-branding.ico',
+    shortcut: '/static/icons/default-favicon.ico',
+  },
   alternates: {
     canonical: siteMetadata.siteUrl,
     languages: {
       'en-US': siteMetadata.localeSiteUrl, // English
     },
   },
+};
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#ffffff',
 };
 
 export default function RootLayout({
@@ -61,6 +74,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <JsonLd />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

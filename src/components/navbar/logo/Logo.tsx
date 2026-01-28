@@ -1,4 +1,4 @@
-import { siteMetadata } from '@/data/siteMetadata';
+import { siteMetadata } from '@/config/site';
 import '../../../app/styles/logo.css';
 
 const Logo = () => {
