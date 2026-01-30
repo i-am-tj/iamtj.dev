@@ -43,31 +43,30 @@ export default function Home() {
             <p className="mt-1 max-w-xl text-sm text-slate-500 dark:text-slate-400 md:text-base">
               Writing code that creates value. Glad you stopped by.
             </p>
-
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3 md:justify-start">
               <Link
-                href="/projects"
-                className="inline-flex items-center justify-center rounded-md bg-slate-900 px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100"
-              >
-                View Projects
-              </Link>
-              <Link
                 href="/about"
-                className="inline-flex items-center justify-center rounded-md border border-slate-300/70 bg-white/60 px-4 py-2 text-sm font-medium text-slate-700 shadow-sm transition-colors hover:bg-white/80 focus:outline-none focus:ring-2 focus:ring-slate-300 focus:ring-offset-2 dark:border-slate-700 dark:bg-slate-900/50 dark:text-slate-200 dark:hover:bg-slate-900/70"
+                className="inline-flex items-center justify-center glass glass-hover rounded-xl bg-white/90 px-5 py-2 text-base font-semibold text-slate-900 shadow-lg ring-1 ring-black/5 transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-300 dark:bg-white dark:text-slate-900"
               >
                 About Me
+              </Link>
+              <Link
+                href="/projects"
+                className="inline-flex items-center justify-center glass glass-hover px-4 py-2 text-sm font-medium text-slate-900 dark:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
+              >
+                View Projects
               </Link>
               <a
                 href="/static/documents/Tanuj_Chakraborty.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-md border border-slate-300/70 bg-white/60 px-4 py-2 text-sm font-medium text-slate-700 shadow-sm transition-colors hover:bg-white/80 focus:outline-none focus:ring-2 focus:ring-slate-300 focus:ring-offset-2 dark:border-slate-700 dark:bg-slate-900/50 dark:text-slate-200 dark:hover:bg-slate-900/70"
+                className="inline-flex items-center justify-center glass glass-hover px-4 py-2 text-sm font-medium text-slate-900 dark:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
               >
                 Resume
               </a>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-md border border-transparent px-4 py-2 text-sm font-medium text-slate-700 underline-offset-4 hover:underline dark:text-slate-300"
+                className="inline-flex items-center justify-center glass glass-hover px-4 py-2 text-sm font-medium text-slate-900 dark:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
               >
                 Contact
               </Link>

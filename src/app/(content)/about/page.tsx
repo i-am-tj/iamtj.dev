@@ -121,146 +121,165 @@ export default async function Page() {
   const jobExperiences = await getJobExperiences();
 
   return (
-    <main className="min-h-[50rem] flex flex-col items-center justify-center px-4 mt-12 font-[family-name:var(--font-geist-sans)]">
-      {/* Intro Section */}
-      <h1 className="text-2xl md:text-4xl font-bold text-center">About Me</h1>
-      <div className="text-base md:text-lg mt-6 mb-4 text-center max-w-3xl px-16">
-        <div
-          className="mb-8"
-          dangerouslySetInnerHTML={{ __html: introContent }}
-        />
-      </div>
-
-      {/* Co-Work Section */}
-      <h2 className="text-xl md:text-3xl font-bold text-center mt-16">
-        Co-Work
-      </h2>
-      <div className="text-base md:text-lg mt-6 mb-20 text-center max-w-3xl px-16">
-        <div
-          className="mb-8"
-          dangerouslySetInnerHTML={{ __html: coworkContent }}
-        />
-      </div>
-
-      {/* Interests Section */}
-      <h2 className="text-xl md:text-3xl font-bold text-center mt-16">
-        Interests
-      </h2>
-      <div className="text-base md:text-lg mt-6 mb-20 text-center max-w-3xl px-16">
-        <div
-          className="mb-8"
-          dangerouslySetInnerHTML={{ __html: interestsContent }}
-        />
-      </div>
-
-      {/* Skills Section */}
-      <h2 className="text-xl md:text-3xl font-bold text-center mt-16">
-        My Skills
-      </h2>
-      <div className="w-full max-w-5xl mt-6 px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {skillsContent.map((content) => {
-            const cleanContent = content.replace(/<\/?h2>/g, '');
-            const skillList = cleanContent.split('### ').slice(1);
-
-            return skillList.map((section, sectionIndex) => {
-              const [title, ...skills] = section.split(' - ');
-
-              return (
-                <div key={sectionIndex} className="flex flex-col items-center">
-                  <h3 className="text-lg md:text-xl font-semibold mb-4 text-center">
-                    {title}
-                  </h3>
-                  <div className="flex flex-col gap-3 w-full">
-                    {skills.map((skill, skillIndex) => (
-                      <div
-                        key={skillIndex}
-                        className="px-3 py-2 shadow-sm text-center text-sm md:text-base"
-                      >
-                        {skill}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              );
-            });
-          })}
-        </div>
-      </div>
-
-      {/* Work Experience Section */}
-      <h2 className="text-xl md:text-3xl font-bold text-center mt-16">
-        Work Experience
-      </h2>
-      <div className="relative w-full max-w-5xl mt-6 px-4 mb-20">
-        {/* Vertical timeline rail */}
-        <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gray-500" />
-        {jobExperiences.map((job, index) => (
-          <section key={index} className="relative pl-16 group mb-10">
-            {/* Card */}
+    <main className="min-h-[50rem] aurora-bg overflow-hidden">
+      <div className="relative z-10 flex flex-col items-center justify-center px-4 mt-12 font-[family-name:var(--font-geist-sans)]">
+        {/* Intro Section */}
+        <h1 className="text-3xl md:text-5xl font-bold text-center heading-glow">
+          About Me
+        </h1>
+        <div className="w-full max-w-3xl mt-6 px-2 md:px-0">
+          <div className="glass glass-hover p-6 md:p-8 text-base md:text-lg leading-relaxed">
             <div
-              className="rounded-lg border border-gray-200/80 backdrop-blur p-4 md:p-5 shadow-sm hover:shadow-md transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              tabIndex={0}
-            >
-              <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
-                <div>
-                  <h3 className="text-xl font-bold text-white-100">
-                    {job.company}
-                  </h3>
-                  <h4 className="text-lg font-semibold text-gray-500">
-                    {job.title}
-                  </h4>
+              className="mb-0"
+              dangerouslySetInnerHTML={{ __html: introContent }}
+            />
+          </div>
+        </div>
+
+        {/* Co-Work Section */}
+        <h2 className="text-2xl md:text-4xl font-bold text-center mt-16 heading-glow">
+          Co-Work
+        </h2>
+        <div className="w-full max-w-3xl mt-6 px-2 md:px-0">
+          <div className="glass glass-hover p-6 md:p-8 text-base md:text-lg leading-relaxed">
+            <div
+              className="mb-0"
+              dangerouslySetInnerHTML={{ __html: coworkContent }}
+            />
+          </div>
+        </div>
+
+        {/* Interests Section */}
+        <h2 className="text-2xl md:text-4xl font-bold text-center mt-16 heading-glow">
+          Interests
+        </h2>
+        <div className="w-full max-w-3xl mt-6 px-2 md:px-0">
+          <div className="glass glass-hover p-6 md:p-8 text-base md:text-lg leading-relaxed">
+            <div
+              className="mb-0"
+              dangerouslySetInnerHTML={{ __html: interestsContent }}
+            />
+          </div>
+        </div>
+
+        {/* Skills Section */}
+        <h2 className="text-2xl md:text-4xl font-bold text-center mt-16 heading-glow">
+          My Skills
+        </h2>
+        <div className="w-full max-w-5xl mt-6 px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {skillsContent.map((content, idx) => {
+              const cleanContent = content.replace(/<\/?h2>/g, '');
+              const skillList = cleanContent.split('### ').slice(1);
+
+              return skillList.map((section, sectionIndex) => {
+                const [title, ...skills] = section.split(' - ');
+
+                return (
+                  <div
+                    key={`${idx}-${sectionIndex}`}
+                    className="glass glass-hover p-5 flex flex-col items-center text-center"
+                  >
+                    <h3 className="text-lg md:text-xl font-semibold mb-4">
+                      {title}
+                    </h3>
+                    <div className="flex flex-col gap-2 w-full">
+                      {skills.map((skill, skillIndex) => (
+                        <div
+                          key={skillIndex}
+                          className="glass-chip glass-hover text-sm md:text-base"
+                        >
+                          {skill}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                );
+              });
+            })}
+          </div>
+        </div>
+
+        {/* Work Experience Section */}
+        <h2 className="text-2xl md:text-4xl font-bold text-center mt-16 heading-glow">
+          Work Experience
+        </h2>
+        <div className="relative w-full max-w-5xl mt-6 px-4 mb-20">
+          {/* Vertical timeline rail */}
+          <div className="absolute left-6 top-0 bottom-0 w-px glass-rail" />
+          {jobExperiences.map((job, index) => (
+            <section key={index} className="relative pl-16 group mb-10">
+              {/* Rail node */}
+              <span
+                className="absolute left-5 top-6 w-3 h-3 rounded-full bg-white/70 border border-white/30 shadow"
+                aria-hidden="true"
+              />
+
+              {/* Card */}
+              <div
+                className="glass glass-hover p-4 md:p-5 shadow-lg transition-shadow duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+                tabIndex={0}
+              >
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-1">
+                  <div>
+                    <h3 className="text-xl font-bold">{job.company}</h3>
+                    <h4 className="text-lg font-semibold text-gray-300">
+                      {job.title}
+                    </h4>
+                  </div>
+                  <p className="text-sm text-gray-400 mt-2 md:mt-0">
+                    {job.duration} • {job.location}
+                  </p>
                 </div>
-                <p className="text-sm text-gray-400 mt-2 md:mt-0">
-                  {job.duration} • {job.location}
-                </p>
+                {/* Hover-to-toggle details (slides down) */}
+                <div className="overflow-hidden transition-all duration-300 ease-out max-h-0 opacity-0 -translate-y-1 group-hover:max-h-[40rem] group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:max-h-[40rem] group-focus-within:opacity-100 group-focus-within:translate-y-0">
+                  <div
+                    className="pt-3 space-y-2 text-sm md:text-base leading-relaxed"
+                    dangerouslySetInnerHTML={{ __html: job.content }}
+                  />
+                </div>
               </div>
-              {/* Hover-to-toggle details (slides down) */}
-              <div className="overflow-hidden transition-all duration-300 ease-out max-h-0 opacity-0 -translate-y-1 group-hover:max-h-[40rem] group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:max-h-[40rem] group-focus-within:opacity-100 group-focus-within:translate-y-0">
-                <div
-                  className="pt-3 space-y-2 text-sm md:text-base"
-                  dangerouslySetInnerHTML={{ __html: job.content }}
-                />
-              </div>
-            </div>
-          </section>
-        ))}
-      </div>
+            </section>
+          ))}
+        </div>
 
-      {/* Links Section */}
-      <h2 className="text-xl md:text-3xl font-bold text-center mt-16">
-        Find Me Online
-      </h2>
-      <div className="text-base md:text-lg text-center max-w-3xl px-16 mb-20">
-        <div className="flex flex-wrap justify-center mt-6 gap-6">
-          {linksContent.map((content) => {
-            const cleanContent = content.replace(/<\/?p>/g, '');
-            const links = cleanContent.match(/<a href="([^"]+)">([^<]+)<\/a>/g);
+        {/* Links Section */}
+        <h2 className="text-2xl md:text-4xl font-bold text-center mt-16 heading-glow">
+          Find Me Online
+        </h2>
+        <div className="text-base md:text-lg text-center max-w-3xl px-4 md:px-16 mb-20 w-full">
+          <div className="flex flex-wrap justify-center mt-6 gap-3 md:gap-4">
+            {linksContent.map((content, idx) => {
+              const cleanContent = content.replace(/<\/?p>/g, '');
+              const links = cleanContent.match(
+                /<a href="([^"]+)">([^<]+)<\/a>/g,
+              );
 
-            return links
-              ? links.map((link, i) => {
-                  const hrefMatch = link.match(/href="([^"]+)"/);
-                  const textMatch = link.match(/>([^<]+)<\/a>/);
+              return links
+                ? links.map((link, i) => {
+                    const hrefMatch = link.match(/href="([^"]+)"/);
+                    const textMatch = link.match(/>([^<]+)<\/a>/);
 
-                  if (hrefMatch && textMatch) {
-                    const href = hrefMatch[1];
-                    const text = textMatch[1];
-                    return (
-                      <a
-                        key={i}
-                        href={href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="px-4 py-2 transition-colors"
-                      >
-                        {text}
-                      </a>
-                    );
-                  }
-                  return null;
-                })
-              : null;
-          })}
+                    if (hrefMatch && textMatch) {
+                      const href = hrefMatch[1];
+                      const text = textMatch[1];
+                      return (
+                        <a
+                          key={`${idx}-${i}`}
+                          href={href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="glass-chip glass-hover transition-colors"
+                        >
+                          {text}
+                        </a>
+                      );
+                    }
+                    return null;
+                  })
+                : null;
+            })}
+          </div>
         </div>
       </div>
     </main>
