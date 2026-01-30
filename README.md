@@ -74,7 +74,7 @@ Here are the latest performance metrics for the website:
 
 | Metric         | Mobile | Desktop |
 | -------------- | ------ | ------- |
-| Performance    | 100    | 100     |
+| Performance    | 96     | 100     |
 | Accessibility  | 100    | 100     |
 | Best Practices | 100    | 100     |
 | SEO            | 100    | 100     |
@@ -101,7 +101,7 @@ Feel free to reach out if you have any questions or suggestions! You can contact
 
 <div align="center">
 
-### Built with 💻, ☕, and ❤️ by **Tanuj Chakraborty**
+### Built with 💻, ☕️, and ❤️ by **Tanuj Chakraborty**
 
 </div>
 
