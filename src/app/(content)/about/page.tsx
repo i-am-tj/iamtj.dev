@@ -121,14 +121,14 @@ export default async function Page() {
   const jobExperiences = await getJobExperiences();
 
   return (
-    <main className="min-h-[50rem] aurora-bg overflow-hidden">
+    <main className="min-h-[50rem] aurora-blue overflow-hidden">
       <div className="relative z-10 flex flex-col items-center justify-center px-4 mt-12 font-[family-name:var(--font-geist-sans)]">
         {/* Intro Section */}
         <h1 className="text-3xl md:text-5xl font-bold text-center heading-glow">
-          About Me
+          <span className="shimmer-underline">About Me</span>
         </h1>
         <div className="w-full max-w-3xl mt-6 px-2 md:px-0">
-          <div className="glass glass-hover p-6 md:p-8 text-base md:text-lg leading-relaxed">
+          <div className="glass glass-hover card-accent tilt-on-hover p-6 md:p-8 text-base md:text-lg leading-relaxed">
             <div
               className="mb-0"
               dangerouslySetInnerHTML={{ __html: introContent }}
@@ -138,10 +138,10 @@ export default async function Page() {
 
         {/* Co-Work Section */}
         <h2 className="text-2xl md:text-4xl font-bold text-center mt-16 heading-glow">
-          Co-Work
+          <span className="shimmer-underline">Co-Work</span>
         </h2>
         <div className="w-full max-w-3xl mt-6 px-2 md:px-0">
-          <div className="glass glass-hover p-6 md:p-8 text-base md:text-lg leading-relaxed">
+          <div className="glass glass-hover card-accent tilt-on-hover p-6 md:p-8 text-base md:text-lg leading-relaxed">
             <div
               className="mb-0"
               dangerouslySetInnerHTML={{ __html: coworkContent }}
@@ -151,10 +151,10 @@ export default async function Page() {
 
         {/* Interests Section */}
         <h2 className="text-2xl md:text-4xl font-bold text-center mt-16 heading-glow">
-          Interests
+          <span className="shimmer-underline">Interests</span>
         </h2>
         <div className="w-full max-w-3xl mt-6 px-2 md:px-0">
-          <div className="glass glass-hover p-6 md:p-8 text-base md:text-lg leading-relaxed">
+          <div className="glass glass-hover card-accent tilt-on-hover p-6 md:p-8 text-base md:text-lg leading-relaxed">
             <div
               className="mb-0"
               dangerouslySetInnerHTML={{ __html: interestsContent }}
@@ -164,7 +164,7 @@ export default async function Page() {
 
         {/* Skills Section */}
         <h2 className="text-2xl md:text-4xl font-bold text-center mt-16 heading-glow">
-          My Skills
+          <span className="shimmer-underline">My Skills</span>
         </h2>
         <div className="w-full max-w-5xl mt-6 px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -178,16 +178,16 @@ export default async function Page() {
                 return (
                   <div
                     key={`${idx}-${sectionIndex}`}
-                    className="glass glass-hover p-5 flex flex-col items-center text-center"
+                    className="glass glass-hover card-accent tilt-on-hover p-5 flex flex-col items-center text-center"
                   >
-                    <h3 className="text-lg md:text-xl font-semibold mb-4">
+                    <h3 className="text-lg md:text-xl font-semibold mb-4 bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500 bg-clip-text text-transparent">
                       {title}
                     </h3>
                     <div className="flex flex-col gap-2 w-full">
                       {skills.map((skill, skillIndex) => (
                         <div
                           key={skillIndex}
-                          className="glass-chip glass-hover text-sm md:text-base"
+                          className="glass-chip glass-hover chip-animated text-sm md:text-base"
                         >
                           {skill}
                         </div>
@@ -202,39 +202,37 @@ export default async function Page() {
 
         {/* Work Experience Section */}
         <h2 className="text-2xl md:text-4xl font-bold text-center mt-16 heading-glow">
-          Work Experience
+          <span className="shimmer-underline">Work Experience</span>
         </h2>
         <div className="relative w-full max-w-5xl mt-6 px-4 mb-20">
-          {/* Vertical timeline rail */}
-          <div className="absolute left-6 top-0 bottom-0 w-px glass-rail" />
+          {/* Central timeline rail */}
+          <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px glass-rail hidden md:block" />
           {jobExperiences.map((job, index) => (
-            <section key={index} className="relative pl-16 group mb-10">
+            <section key={index} className="relative group mb-10">
               {/* Rail node */}
               <span
-                className="absolute left-5 top-6 w-3 h-3 rounded-full bg-white/70 border border-white/30 shadow"
+                className="rail-node hidden md:block absolute left-1/2 -translate-x-1/2 top-6 w-3 h-3 rounded-full shadow"
                 aria-hidden="true"
               />
 
               {/* Card */}
               <div
-                className="glass glass-hover p-4 md:p-5 shadow-lg transition-shadow duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+                className={`timeline-card glass glass-hover card-accent tilt-on-hover p-4 md:p-5 shadow-lg transition-shadow duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 w-full md:w-[calc(50%-1.5rem)] ${index % 2 === 0 ? 'timeline-left md:mr-auto md:pr-8' : 'timeline-right md:ml-auto md:pl-8'}`}
                 tabIndex={0}
               >
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-1">
-                  <div>
-                    <h3 className="text-xl font-bold">{job.company}</h3>
-                    <h4 className="text-lg font-semibold text-gray-300">
-                      {job.title}
-                    </h4>
-                  </div>
-                  <p className="text-sm text-gray-400 mt-2 md:mt-0">
-                    {job.duration} • {job.location}
+                <div className="flex flex-col items-start gap-1">
+                  <h3 className="text-xl font-bold">{job.company}</h3>
+                  <h4 className="text-lg font-semibold text-gray-300">
+                    {job.title}
+                  </h4>
+                  <p className="text-sm text-gray-400">
+                    {job.duration}. {job.location}
                   </p>
                 </div>
                 {/* Hover-to-toggle details (slides down) */}
                 <div className="overflow-hidden transition-all duration-300 ease-out max-h-0 opacity-0 -translate-y-1 group-hover:max-h-[40rem] group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:max-h-[40rem] group-focus-within:opacity-100 group-focus-within:translate-y-0">
                   <div
-                    className="pt-3 space-y-2 text-sm md:text-base leading-relaxed"
+                    className="pt-3 space-y-2 text-sm md:text-base leading-relaxed md-body"
                     dangerouslySetInnerHTML={{ __html: job.content }}
                   />
                 </div>
@@ -245,7 +243,7 @@ export default async function Page() {
 
         {/* Links Section */}
         <h2 className="text-2xl md:text-4xl font-bold text-center mt-16 heading-glow">
-          Find Me Online
+          <span className="shimmer-underline">Find Me Online</span>
         </h2>
         <div className="text-base md:text-lg text-center max-w-3xl px-4 md:px-16 mb-20 w-full">
           <div className="flex flex-wrap justify-center mt-6 gap-3 md:gap-4">
@@ -269,9 +267,10 @@ export default async function Page() {
                           href={href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="glass-chip glass-hover transition-colors"
+                          className="glass-chip glass-hover chip-animated transition-colors inline-flex items-center gap-1 bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500 bg-clip-text text-transparent"
                         >
-                          {text}
+                          <span>{text}</span>
+                          <span aria-hidden="true">↗</span>
                         </a>
                       );
                     }
