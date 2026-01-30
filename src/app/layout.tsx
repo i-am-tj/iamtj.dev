@@ -81,11 +81,17 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar />
-        {children}
-        <SpeedInsights />
-        <Analytics />
-        <Footer />
+        <div className="relative isolate min-h-screen">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-black/20 via-transparent to-black/30"
+          />
+          <Navbar />
+          {children}
+          <SpeedInsights />
+          <Analytics />
+          <Footer />
+        </div>
       </body>
     </html>
   );

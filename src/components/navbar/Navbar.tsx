@@ -32,34 +32,39 @@ const Navbar = () => {
   }, [isOpen]);
 
   const pathname = usePathname();
+  const isHome = pathname === '/';
 
   return (
     <nav className="w-full flex items-center justify-between px-10 py-5">
       <Logo />
-      <div className="space-x-4 hidden md:flex">
-        {data.general.map((item) => (
-          <Link
-            key={item.name}
-            href={item.href}
-            className={`relative hover:text-gray-400 transition-colors duration-300 font-extralight ${
-              pathname === item.href
-                ? 'after:absolute after:left-0 after:bottom-0 after:h-[1px] after:w-full after:bg-gray-400'
-                : 'after:absolute after:left-0 after:bottom-0 after:h-[1px] after:w-0 after:bg-gray-400 after:transition-all after:duration-300 hover:after:w-full'
-            }`}
-          >
-            {item.name}
-          </Link>
-        ))}
-      </div>
-      <button
-        className="md:hidden p-2"
-        onClick={toggleMenu}
-        aria-label="Toggle menu"
-      >
-        {isOpen ? <CloseIcon /> : <HamburgerIcon />}
-      </button>
+      {!isHome && (
+        <div className="space-x-4 hidden md:flex">
+          {data.general.map((item) => (
+            <Link
+              key={item.name}
+              href={item.href}
+              className={`relative hover:text-gray-400 transition-colors duration-300 font-extralight ${
+                pathname === item.href
+                  ? 'after:absolute after:left-0 after:bottom-0 after:h-[1px] after:w-full after:bg-gray-400'
+                  : 'after:absolute after:left-0 after:bottom-0 after:h-[1px] after:w-0 after:bg-gray-400 after:transition-all after:duration-300 hover:after:w-full'
+              }`}
+            >
+              {item.name}
+            </Link>
+          ))}
+        </div>
+      )}
+      {!isHome && (
+        <button
+          className="md:hidden p-2"
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
+          {isOpen ? <CloseIcon /> : <HamburgerIcon />}
+        </button>
+      )}
 
-      {isOpen && (
+      {isOpen && !isHome && (
         <div className="md:hidden fixed inset-0 top-20 backdrop-blur-md w-full max-h-screen p-6 flex flex-col z-50 bg-opacity-90">
           <div className="w-full flex flex-col items-center space-y-4 sm:p-4">
             {data.general.map((item) => (
