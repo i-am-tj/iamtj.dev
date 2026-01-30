@@ -52,8 +52,8 @@ export const metadata: Metadata = {
     ],
   },
   icons: {
-    icon: '/static/icons/i-am-tj-branding.ico',
-    shortcut: '/static/icons/default-favicon.ico',
+    icon: '/static/icons/default-favico.ico',
+    shortcut: '/static/icons/shortcut-favico.ico',
   },
   alternates: {
     canonical: siteMetadata.siteUrl,
