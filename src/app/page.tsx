@@ -4,12 +4,6 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <main className="relative isolate overflow-hidden">
-      {/* Background decorations */}
-      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute left-1/2 top-[-12rem] h-[36rem] w-[36rem] -translate-x-1/2 rounded-full bg-gradient-to-tr from-indigo-400/40 via-sky-400/30 to-emerald-400/30 blur-3xl" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,theme(colors.slate.200)_1px,transparent_1px)] [background-size:22px_22px] dark:bg-[radial-gradient(circle_at_1px_1px,theme(colors.slate.800)_1px,transparent_1px)]" />
-      </div>
-
       <section className="container mx-auto flex min-h-[calc(100vh-6rem)] items-center px-6 py-20 md:py-28">
         <div className="grid w-full grid-cols-1 items-center gap-12 md:grid-cols-2">
           {/* Portrait */}
