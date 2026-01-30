@@ -5,7 +5,7 @@ location: 'Bengaluru, Karnataka'
 duration: 'September 2024 - Present'
 ---
 
-- 
-- 
-- 
-- 
+-
+-
+-
+-
