@@ -52,8 +52,8 @@ export const metadata: Metadata = {
     ],
   },
   icons: {
-    icon: '/static/icons/i-am-tj-branding.ico',
-    shortcut: '/static/icons/default-favicon.ico',
+    icon: '/static/icons/default-favico.ico',
+    shortcut: '/static/icons/shortcut-favico.ico',
   },
   alternates: {
     canonical: siteMetadata.siteUrl,
@@ -81,11 +81,21 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar />
-        {children}
-        <SpeedInsights />
-        <Analytics />
-        <Footer />
+        <div className="relative isolate min-h-screen">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0 -z-10"
+          >
+            <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30" />
+            <div className="absolute left-1/2 top-[-12rem] h-[36rem] w-[36rem] -translate-x-1/2 rounded-full bg-gradient-to-tr from-indigo-400/40 via-sky-400/30 to-emerald-400/30 blur-3xl" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,theme(colors.slate.200)_1px,transparent_1px)] [background-size:22px_22px] dark:bg-[radial-gradient(circle_at_1px_1px,theme(colors.slate.800)_1px,transparent_1px)]" />
+          </div>
+          <Navbar />
+          {children}
+          <SpeedInsights />
+          <Analytics />
+          <Footer />
+        </div>
       </body>
     </html>
   );
