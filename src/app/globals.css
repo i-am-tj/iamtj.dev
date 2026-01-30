@@ -299,18 +299,21 @@ body {
     background:
       linear-gradient(#0000, #0000) padding-box,
       linear-gradient(
-        135deg,
-        rgba(99, 102, 241, 0.35),
-        rgba(14, 165, 233, 0.35),
-        rgba(16, 185, 129, 0.35)
-      ) border-box;
+          135deg,
+          rgba(99, 102, 241, 0.35),
+          rgba(14, 165, 233, 0.35),
+          rgba(16, 185, 129, 0.35)
+        )
+        border-box;
     background-clip: padding-box, border-box;
     isolation: isolate; /* prevent blend glitches with inner glass layers */
   }
 
   /* Micro tilt for hover elevation */
   .tilt-on-hover {
-    transition: transform 300ms ease, box-shadow 300ms ease;
+    transition:
+      transform 300ms ease,
+      box-shadow 300ms ease;
     will-change: transform;
     backface-visibility: hidden; /* fix thin seam on transforms */
     transform: translateZ(0); /* promote to its own layer to avoid artifacts */
@@ -321,7 +324,9 @@ body {
 
   /* Animated chips for links */
   .chip-animated {
-    transition: transform 200ms ease, box-shadow 200ms ease;
+    transition:
+      transform 200ms ease,
+      box-shadow 200ms ease;
   }
   .chip-animated:hover {
     transform: translateY(-1px);
@@ -356,8 +361,12 @@ body {
 
   /* Timeline rail node styling to better integrate with the glass/aurora theme */
   .rail-node {
-    background:
-      radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0 40%, rgba(255, 255, 255, 0.65) 45%, transparent 52%),
+    background: radial-gradient(
+        circle at 50% 50%,
+        rgba(255, 255, 255, 0.9) 0 40%,
+        rgba(255, 255, 255, 0.65) 45%,
+        transparent 52%
+      ),
       conic-gradient(
         from 180deg at 50% 50%,
         rgba(99, 102, 241, 0.6),
@@ -376,13 +385,19 @@ body {
     position: absolute;
     inset: -6px;
     border-radius: 9999px;
-    background: radial-gradient(closest-side, rgba(99, 102, 241, 0.25), transparent 70%);
+    background: radial-gradient(
+      closest-side,
+      rgba(99, 102, 241, 0.25),
+      transparent 70%
+    );
     filter: blur(6px);
     pointer-events: none;
   }
 
   /* Timeline card connector lines + pointers */
-  .timeline-card { position: relative; }
+  .timeline-card {
+    position: relative;
+  }
   .timeline-left::after,
   .timeline-right::after {
     content: '';
@@ -392,8 +407,14 @@ body {
     background: rgba(255, 255, 255, 0.35);
     box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
   }
-  .timeline-left::after { right: -1rem; width: 0; }
-  .timeline-right::after { left: -1rem; width: 0; }
+  .timeline-left::after {
+    right: -1rem;
+    width: 0;
+  }
+  .timeline-right::after {
+    left: -1rem;
+    width: 0;
+  }
 
   .timeline-left::before,
   .timeline-right::before {

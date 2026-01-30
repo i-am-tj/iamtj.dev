@@ -47,7 +47,7 @@ export default async function Projects() {
             Things I&#39;ve built
           </span>
         </h1>
-        <p className="mt-4 md:mt-6 text-base md:text-lg text-gray-500 max-w-3xl mx-auto">
+        <p className="mt-4 md:mt-6 text-base text-slate-600 dark:text-slate-300 md:text-lg max-w-6xl mx-auto">
           A selection of projects showcasing product thinking, UX polish, and
           engineering depth.
         </p>

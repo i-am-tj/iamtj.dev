@@ -52,7 +52,7 @@ export default function Home() {
               </Link>
               <Link
                 href="/projects"
-                className="inline-flex items-center justify-center glass glass-hover px-4 py-2 text-sm font-medium text-slate-900 dark:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
+                className="glass glass-hover inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-medium text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30 dark:text-white"
               >
                 View Projects
               </Link>
@@ -60,13 +60,13 @@ export default function Home() {
                 href="/static/documents/Tanuj_Chakraborty.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center glass glass-hover px-4 py-2 text-sm font-medium text-slate-900 dark:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
+                className="inline-flex items-center justify-center glass glass-hover rounded-xl px-4 py-2 text-sm font-medium text-slate-900 dark:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
               >
                 Resume
               </a>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center glass glass-hover px-4 py-2 text-sm font-medium text-slate-900 dark:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
+                className="inline-flex items-center justify-center glass glass-hover rounded-xl px-4 py-2 text-sm font-medium text-slate-900 dark:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
               >
                 Contact
               </Link>
