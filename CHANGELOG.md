@@ -1,3 +1,10 @@
+# 1.0.0 (2026-01-30)
+
+
+### Performance Improvements
+
+* optimize image loading for faster page speed ([4313a32](https://github.com/i-am-tj/iamtj.dev/commit/4313a3294d52787b7f2cc5e418f632c0ed9479de))
+
 # Changelog
 
 All notable changes to this project will be documented in this file.
