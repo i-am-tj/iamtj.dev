@@ -84,7 +84,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="relative isolate min-h-screen">
+        <div className="relative isolate min-h-screen overflow-x-hidden">
           <div
             aria-hidden
             className="pointer-events-none absolute inset-0 -z-10"
