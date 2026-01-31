@@ -84,7 +84,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="relative isolate min-h-screen overflow-x-hidden">
+        <div className="relative isolate min-h-dvh overflow-x-hidden flex flex-col">
           <div
             aria-hidden
             className="pointer-events-none absolute inset-0 -z-10"
@@ -94,7 +94,7 @@ export default function RootLayout({
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,theme(colors.slate.200)_1px,transparent_1px)] [background-size:22px_22px] dark:bg-[radial-gradient(circle_at_1px_1px,theme(colors.slate.800)_1px,transparent_1px)]" />
           </div>
           <Navbar />
-          {children}
+          <div className="flex-1">{children}</div>
           <SpeedInsights />
           <Analytics />
           <Footer />

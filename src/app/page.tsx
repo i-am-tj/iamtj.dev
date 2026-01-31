@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <main className="relative isolate overflow-hidden">
-      <section className="container mx-auto flex min-h-[calc(100vh-6rem)] items-center px-6 py-20 md:py-28">
+    <main className="relative isolate min-h-full">
+      <section className="container mx-auto flex min-h-full items-center px-6 py-20 md:py-28 translate-y-4 md:translate-y-6 lg:translate-y-0 lg:mt-20 xl:mt-28 2xl:mt-32">
         <div className="grid w-full grid-cols-1 items-center gap-12 md:grid-cols-2">
           {/* Portrait */}
           <div className="order-last mx-auto md:order-first">
