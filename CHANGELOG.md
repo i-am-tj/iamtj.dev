@@ -1,9 +1,8 @@
 # 1.0.0 (2026-01-30)
 
-
 ### Performance Improvements
 
-* optimize image loading for faster page speed ([4313a32](https://github.com/i-am-tj/iamtj.dev/commit/4313a3294d52787b7f2cc5e418f632c0ed9479de))
+
 
 # Changelog
 
@@ -49,6 +48,7 @@ All notable changes to this project will be documented in this file.
 - **About Page**: Page providing information about author.
 - **Project Page**: Detailed page describing the projects.
 - **Contact Page**: Page allowing users to get in touch with the author via email and view resume.
+- optimize image loading for faster page speed ([4313a32](https://github.com/i-am-tj/iamtj.dev/commit/4313a3294d52787b7f2cc5e418f632c0ed9479de))
 
 ### Deployment
 
