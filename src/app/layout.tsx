@@ -19,42 +19,44 @@ const geistMono = localFont({
   weight: '100 900',
 });
 
+const PERSON_NAME = 'Tanuj Chakraborty';
+const ROLE = 'Senior Software Developer at Oracle';
+
+const MAIN_TITLE = `${PERSON_NAME} | ${ROLE}`;
+
 export const metadata: Metadata = {
-  metadataBase: new URL(siteMetadata.siteUrl),
-  title: siteMetadata.title,
+  title: MAIN_TITLE,
   description: siteMetadata.description,
-  keywords: siteMetadata.keywords,
+
   openGraph: {
-    title: siteMetadata.titleAlt,
-    description: siteMetadata.headerAltTitle,
+    type: 'profile',
+    title: MAIN_TITLE,
+    description: siteMetadata.description,
+    siteName: PERSON_NAME,
     url: siteMetadata.siteUrl,
-    siteName: siteMetadata.titleAlt,
     locale: siteMetadata.locale,
     images: [
       {
-        url: siteMetadata.avatarImage,
+        url: siteMetadata.socialBanner,
         width: 1200,
         height: 630,
         alt: siteMetadata.imageAltDesc,
       },
     ],
   },
+
   twitter: {
     card: 'summary_large_image',
-    site: siteMetadata.twitterHandle,
-    title: siteMetadata.titleAlt,
-    description: siteMetadata.headerTitle,
-    images: [
-      {
-        url: siteMetadata.socialBanner,
-        alt: siteMetadata.imageAltDesc,
-      },
-    ],
+    title: MAIN_TITLE,
+    description: siteMetadata.description,
+    images: [siteMetadata.socialBanner],
   },
+
   icons: {
     icon: '/static/icons/default-favico.ico',
     shortcut: '/static/icons/shortcut-favico.ico',
   },
+
   alternates: {
     canonical: siteMetadata.siteUrl,
     languages: {
@@ -62,6 +64,7 @@ export const metadata: Metadata = {
     },
   },
 };
+
 export const viewport = {
   width: 'device-width',
   initialScale: 1,

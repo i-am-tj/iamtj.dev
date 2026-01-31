@@ -23,7 +23,6 @@ export default function JsonLd() {
     hashnode,
     buymeacoffee,
     email,
-    title,
   } = siteMetadata;
 
   const sameAs = [
@@ -42,12 +41,17 @@ export default function JsonLd() {
     url: siteUrl,
     image: toAbsoluteUrl(avatarImage, siteUrl),
     email,
-    jobTitle: 'Software Developer',
+    jobTitle: 'Senior Software Developer at Oracle',
+    worksFor: {
+      '@type': 'Organization',
+      name: 'Oracle',
+      url: 'https://www.oracle.com/',
+    },
     sameAs,
     mainEntityOfPage: {
       '@type': 'WebSite',
       '@id': siteUrl,
-      name: title,
+      name: 'Tanuj Chakraborty | Senior Software Developer',
       url: siteUrl,
     },
   };

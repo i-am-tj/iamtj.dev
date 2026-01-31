@@ -23,21 +23,24 @@ export default function Home() {
 
           {/* Copy */}
           <div className="flex flex-col items-center text-center md:items-start md:text-left">
+            <p className="sr-only">
+              Senior Software Developer at Oracle | Tanuj Chakraborty
+            </p>
             <span className="inline-flex items-center gap-2 rounded-full border border-slate-200/80 bg-white/70 px-3 py-1 text-xs font-medium text-slate-700 shadow-sm backdrop-blur dark:border-slate-800 dark:bg-slate-900/60 dark:text-slate-300">
               <span className="relative inline-flex h-2.5 w-2.5 items-center justify-center before:absolute before:-inset-1 before:rounded-full before:bg-emerald-500/40 before:blur before:content-['']">
                 <span className="absolute inset-0 rounded-full ring-1 ring-emerald-400/80 heartbeat-pulse origin-center" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500 ring-2 ring-emerald-300/70 dark:ring-offset-slate-900 shadow-[0_0_10px_3px_rgba(16,185,129,0.7)] drop-shadow-[0_0_8px_rgba(16,185,129,0.85)]" />
               </span>
-              <span className="text-sm md:text-base font-semibold">
-                Software Developer
+              <span className="text-xs sm:text-sm lg:text-base font-semibold">
+                Senior Software Developer
               </span>
               <span
-                className="text-sm md:text-base font-semibold"
+                className="text-xs sm:text-sm lg:text-base font-semibold"
                 aria-hidden="true"
               >
                 •
               </span>
-              <span className="text-sm md:text-base font-semibold">
+              <span className="text-xs sm:text-sm lg:text-base font-semibold">
                 India 🇮🇳
               </span>
             </span>
