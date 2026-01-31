@@ -5,6 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
+      disallow: '/blog',
     },
     sitemap: 'https://iamtj.dev/sitemap.xml',
     host: 'https://iamtj.dev',

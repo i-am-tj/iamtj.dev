@@ -20,6 +20,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -139,6 +145,7 @@ body {
 
   .aurora-bg {
     position: relative;
+    overflow-x: clip;
   }
   .aurora-bg::before {
     content: '';
@@ -181,6 +188,7 @@ body {
 
   .aurora-blue {
     position: relative;
+    overflow-x: clip;
   }
   .aurora-blue::before {
     content: '';
@@ -351,6 +359,16 @@ body {
   }
   .md-body li {
     margin: 0.25rem 0; /* my-1 */
+  }
+
+  /* Wrapping for long content and media in Markdown */
+  .md-body a {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+  .md-body img {
+    max-width: 100%;
+    height: auto;
   }
   .md-body ul ul {
     list-style: circle;
