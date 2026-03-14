@@ -1,5 +1,5 @@
 import { footerData as data } from './data/footerData';
-import { siteMetadata } from '../../data/siteMetadata';
+import { siteMetadata } from '@/config/site';
 
 const Footer = () => {
   return (
